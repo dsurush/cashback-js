@@ -21,8 +21,7 @@ let purchases = [
 ];
 
 function take_percent(amount, percent){
-    let answer;
-    answer = amount * percent / 100;
+    let answer = amount * percent / 100;
     return answer;
 }
 
