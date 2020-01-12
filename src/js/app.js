@@ -1,7 +1,7 @@
 const SIMPLE = 'simple';
 const INCREASED = 'increased';
 const SPECIAL = 'special';
-let purchases = [
+const purchases = [
     {
         amount: 0,
         category: SIMPLE,
