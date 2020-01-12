@@ -32,7 +32,7 @@ const INCREASED_CASHBACK_PERCENT = 5;
 const SPECIAL_CASHBACK_PERCENT = 30;
 let cashbackOfOne;
 
-for(let purchase of purchases){
+for(const purchase of purchases){
     if(purchase.category == SIMPLE){
         cashbackOfOne = take_percent(purchase.amount, SIMPLE_CASHBACK_PERCENT);
     } else if(purchase.category == INCREASED){
