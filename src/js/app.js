@@ -30,6 +30,7 @@ let cashback = 0;
 const SIMPLE_CASHBACK_PERCENT = 1;
 const INCREASED_CASHBACK_PERCENT = 5;
 const SPECIAL_CASHBACK_PERCENT = 30;
+const BORDER_CASHBACK = 3000;
 let cashbackOfOne;
 
 for(const purchase of purchases){
@@ -40,8 +41,8 @@ for(const purchase of purchases){
     } else if(purchase.category == SPECIAL){
         cashbackOfOne = take_percent(purchase.amount, SPECIAL_CASHBACK_PERCENT);
     }
-    if(cashbackOfOne > 3000)
-        cashbackOfOne = 3000;
+    if(cashbackOfOne > BORDER_CASHBACK)
+        cashbackOfOne = BORDER_CASHBACK;
     cashback += cashbackOfOne;
 }
 console.log(cashback);
