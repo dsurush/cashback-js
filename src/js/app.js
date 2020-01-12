@@ -30,18 +30,18 @@ let cashback = 0;
 const SIMPLE_CASHBACK_PERCENT = 1;
 const INCREASED_CASHBACK_PERCENT = 5;
 const SPECIAL_CASHBACK_PERCENT = 30;
-let cashback_of_one;
+let cashbackOfOne;
 
 for(let purchase of purchases){
     if(purchase.category == SIMPLE){
-        cashback_of_one = take_percent(purchase.amount, SIMPLE_CASHBACK_PERCENT);
+        cashbackOfOne = take_percent(purchase.amount, SIMPLE_CASHBACK_PERCENT);
     } else if(purchase.category == INCREASED){
-        cashback_of_one = take_percent(purchase.amount, INCREASED_CASHBACK_PERCENT);
+        cashbackOfOne = take_percent(purchase.amount, INCREASED_CASHBACK_PERCENT);
     } else if(purchase.category == SPECIAL){
-        cashback_of_one = take_percent(purchase.amount, SPECIAL_CASHBACK_PERCENT);
+        cashbackOfOne = take_percent(purchase.amount, SPECIAL_CASHBACK_PERCENT);
     }
-    if(cashback_of_one > 3000)
-        cashback_of_one = 3000;
-    cashback += cashback_of_one;
+    if(cashbackOfOne > 3000)
+        cashbackOfOne = 3000;
+    cashback += cashbackOfOne;
 }
 console.log(cashback);
