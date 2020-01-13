@@ -43,7 +43,10 @@ for(const purchase of purchases){
     }
     
 }
-if(predictCashback > BORDER_CASHBACK)
+
+if(predictCashback > BORDER_CASHBACK){
     predictCashback = BORDER_CASHBACK;
+}
+
 cashback = predictCashback;
 console.log(cashback);
