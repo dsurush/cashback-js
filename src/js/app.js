@@ -31,22 +31,21 @@ const SIMPLE_CASHBACK_PERCENT = 1;
 const INCREASED_CASHBACK_PERCENT = 5;
 const SPECIAL_CASHBACK_PERCENT = 30;
 const BORDER_CASHBACK = 3000;
-let predictCashback = 0;
+let cashback = 0;
 
 for(const purchase of purchases){
     if(purchase.category == SIMPLE){
-        predictCashback += take_percent(purchase.amount, SIMPLE_CASHBACK_PERCENT);
+        cashback += take_percent(purchase.amount, SIMPLE_CASHBACK_PERCENT);
     } else if(purchase.category == INCREASED){
-        predictCashback += take_percent(purchase.amount, INCREASED_CASHBACK_PERCENT);
+        cashback += take_percent(purchase.amount, INCREASED_CASHBACK_PERCENT);
     } else if(purchase.category == SPECIAL){
-        predictCashback += take_percent(purchase.amount, SPECIAL_CASHBACK_PERCENT);
+        cashback += take_percent(purchase.amount, SPECIAL_CASHBACK_PERCENT);
     }
     
 }
 
-if(predictCashback > BORDER_CASHBACK){
-    predictCashback = BORDER_CASHBACK;
+if(cashback > BORDER_CASHBACK){
+    cashback = BORDER_CASHBACK;
 }
 
-cashback = predictCashback;
 console.log(cashback);
